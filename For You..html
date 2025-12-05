@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Plot Twist</title>
+<style>
+    body {
+        background:#f7f3f9;
+        font-family:"Poppins", sans-serif;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        margin:0;
+        padding:20px;
+        text-align:center;
+    }
+    .container {
+        background:white;
+        padding:40px;
+        border-radius:20px;
+        box-shadow:0 8px 25px rgba(0,0,0,0.15);
+        max-width:650px;
+        width:100%;
+    }
+    h1 {
+        font-weight:600;
+        color:#7b4ca0;
+        margin-bottom:10px;
+    }
+    button {
+        margin-top:25px;
+        padding:12px 25px;
+        border:none;
+        border-radius:50px;
+        font-size:16px;
+        background:#7b4ca0;
+        color:white;
+        cursor:pointer;
+        transition:0.3s;
+    }
+    button:hover {
+        background:#9e6bd1;
+    }
+    #message {
+        margin-top:25px;
+        text-align:left;
+        white-space:pre-wrap;
+        font-size:15px;
+        line-height:1.6;
+        display:none;
+        color:#4a3569;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Before You Go…</h1>
+    <p>Click the button below. 😊</p>
+    <button onclick="startTyping()">Click Me</button>
+    <div id="message"></div>
+</div>
+
+<script>
+const fullMessage = `Hello, again, Ayesha, and Advance Merry Christmas to you! I know for sure that this seems awkward, but I don’t want to fight myself again and again from staying silent all the time, so here I am, breaking the unspoken feelings that were long hidden in my system.
+
+First of all, I don’t really know how to say this in the simplest way, so let me say it honestly instead. Somewhere between our conversations, the way you reply, and the quiet little moments you don’t even notice. I found myself appreciating you more than I expected. And at first I tried to ignore it, thinking it was just a small feeling I could brush aside. But it didn’t go away. It kept growing in the spaces you didn’t even know you touched — in your kindness, in your laugh, in the way you make things feel lighter without even trying.
+
+Lately, every time we interact, a part of me screams to burst every feeling I had inside me, but another part hesitates and hinders me to do so, because I’m scared. Scared of what the outcome will be, if I took the chance to tell you kung ano ba talagang nararamdaman ko. All those moments — accidentally brushing shoulders, those shared laughters, shared tricycle seats when we go home, the late night comfortable chats we had, the way your eyes crinkle with happiness, the way your lips curve with contentment and joy, makes my heart flutter in every way possible. You make me feel things that were long dormant and gone, and thinking about my feelings for you, makes my heart skip a measured nanometer beat.
+
+Lahat ng mga panahong nakasama kita — tuwing CWTS gardening, pag nakakasama kita sa ka-trio mo (Jeuel and Jayme), sa ATSTBTODA tricycle na pa-Triumph tapos kinukulit at kinikiliti mo pa ako n’on, the time when we had my proposed late night ComProg Study Session and nakikinig ka sa pag-elaborate and pag-discuss ko, and that bvtvery memorable time nung binilhan kita ng lunch mo because I couldn’t help seeing you hungry before the defense in ComProg, were not just the reasons why I felt a spark on myself to you, but because in those small, simple moments, I realized how naturally I gravitate toward you. Hindi dahil special ang mga nangyari, pero dahil ikaw yung kasama ko habang nangyayari sila. And that alone made everything feel lighter, warmer, and something I quietly started looking forward to again. And honestly, ang sarap ng feeling na ganun. Yung tipong gusto ko pa ulit maulit yung mga moments na yun, kahit sobrang simple lang, basta kasama ka. And that’s when I realized: hindi na siya simpleng admiration or simple liking — it grew into something real. Something honest. Something that’s really within the depths of my feelings inside my heart and my whole system that has been screaming ever since.
+
+And all these countless reasons I have mentioned, it all leads to one lead point of this message: and that’s because of the one I’m talking to right now — you, Ayesha.
+
+To get to the whole point, yes, it’s true, Ayesha. I really like you — not just in a quick, fleeting way, but in the soft, steady way that makes me grateful you exist. And I don’t expect anything from you, I don’t want to make things complicated or heavy. I just wanted you to know the truth: that you’ve become someone important to me. Someone I look forward to. Someone I care about more than I planned to. If this changes nothing for you, that’s okay, but if it means something to you too, then I guess that’s the plot twist I’ve been quietly hoping for.
+
+And maybe this is the part where I just let the truth rest gently in your hands. No pressure, no expectations—just honesty, given freely. If your heart doesn’t echo mine, I’ll still be grateful that I got to feel something this warm because of you. But if even the smallest part of you felt something too, then maybe… maybe this isn’t just my story after all. Maybe it’s something we’re both quietly stepping into.
+
+Whatever may the outcome be, I’ll accept it wholeheartedly. I’ll always be the friend that listens, and cares about you. Advanced Merry Christmas once again, Ayesha, and enjoy the holidays ahead.
+`;
+
+let index = 0;
+let typing = false;
+
+function startTyping() {
+    if (typing) return;
+    typing = true;
+    const box = document.getElementById("message");
+    box.style.display = "block";
+    const interval = setInterval(() => {
+        box.textContent = fullMessage.slice(0, index);
+        index++;
+        if (index > fullMessage.length) {
+            clearInterval(interval);
+        }
+    }, 15);
+}
+</script>
+</body>
+</html>
